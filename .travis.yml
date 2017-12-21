@@ -9,7 +9,7 @@ branches:
   - master
 
 addons:
-  firefox: "49.0"
+  firefox: latest
   chrome: stable
 
 install:
@@ -19,6 +19,7 @@ script:
 - yarn run e2e:headless
 - yarn run e2e:chrome
 - yarn run e2e:firefox
+- yarn run e2e:electron
 
 cache:
   yarn: true

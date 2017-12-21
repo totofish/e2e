@@ -20,12 +20,12 @@ module.exports = {
       .waitForElementVisible('body', 1000)
       .setValue('input[type=text]', 'nightwatch')
       .saveScreenshot(imgpath(browser) + '.png')
-      .pause(1000)
-      .waitForElementVisible('input[name=btnK]', 1000)
-      .click('input[name=btnK]')
-      .pause(1000)
-      .assert.containsText('#main', 'Night Watch')
-      .saveScreenshot(imgpath(browser) + '.png')
+      // .pause(1000)
+      // .waitForElementVisible('input[name=btnK]', 1000)
+      // .click('input[name=btnK]')
+      // .pause(1000)
+      // .assert.containsText('#main', 'Night Watch')
+      // .saveScreenshot(imgpath(browser) + '.png')
       .end();
   }
 };
