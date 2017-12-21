@@ -16,6 +16,8 @@ install:
 
 script:
 - yarn run e2e:headless
+- yarn run e2e:chrome
+- yarn run e2e:firefox
 
 cache:
   yarn: true
