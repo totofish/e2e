@@ -6,5 +6,5 @@
 
 # test result
 /tests/e2e/reports
-/tests/e2e/logs
+/tests/e2e/logs/selenium-debug.log
 /tests/e2e/screenshots
