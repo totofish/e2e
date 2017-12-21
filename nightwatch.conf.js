@@ -4,7 +4,6 @@ const geckodriver = require("geckodriver");
 const phantomjs = require('phantomjs-prebuilt')
 const electron = require('electron-prebuilt');
 
-console.log(phantomjs.path);
 
 module.exports = {
   "src_folders": ["tests/e2e"],
@@ -16,8 +15,8 @@ module.exports = {
     "host": "127.0.0.1",
     "port": 4444,
     "cli_args": {
-      // "webdriver.gecko.driver" : geckodriver.path, 
-      "webdriver.firefox.profile" : geckodriver.path,
+      "webdriver.gecko.driver" : geckodriver.path, 
+      // "webdriver.firefox.profile" : geckodriver.path,
       "webdriver.chrome.driver" : chromedriver.path,
       "webdriver.ie.driver" : ""
     }
@@ -35,13 +34,13 @@ module.exports = {
     },
     "phantomjs": {
       "desiredCapabilities" : {
-          "browserName" : "phantomjs",
-          "javascriptEnabled" : true,
-          "acceptSslCerts" : true,
-          // "phantomjs.binary.path" : "node_modules/phantomjs-prebuilt/bin/phantomjs",
-          "phantomjs.binary.path" : phantomjs.path,
-          "phantomjs.cli.args" : ["--ignore-ssl-errors=true"],
-          "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "node_modules/phantomjs-prebuilt/bin/phantomjs",
+        // "phantomjs.binary.path" : phantomjs.path,
+        "phantomjs.cli.args" : ["--ignore-ssl-errors=true", "--web-security-false"],
+        "phantomjs.page.settings.userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/52.0.2743.116 Chrome/52.0.2743.116 Safari/537.36"
       }
     },
     "firefox" : {
@@ -58,7 +57,7 @@ module.exports = {
         "javascriptEnabled": true,
         "acceptSslCerts": true,
         "chromeOptions": {
-          "args" : ["--no-sandbox"]
+          "args" : ["--headless", "--disable-web-security"]
         }
       }
     },
@@ -68,18 +67,15 @@ module.exports = {
         "javascriptEnabled": true,
         "acceptSslCerts": true,
         "chromeOptions": {
-          "binary": electron,
+          "binary": electron
         }
       }
     },
-    "headless" : {
-      "desiredCapabilities": {
-        "browserName": "headless",
-        "javascriptEnabled": true,
-        "acceptSslCerts": true,
-        "chromeOptions": {
-          "args" : ["--headless"]
-        }
+    "safari" : {
+      "desiredCapabilities" : {
+        "browserName" : "safari",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
       }
     }
   }
