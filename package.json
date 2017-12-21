@@ -7,7 +7,8 @@
   "author": "totofish",
   "license": "MIT",
   "scripts": {
-    "e2e": "nightwatch"
+    "e2e": "nightwatch",
+    "e2e:firefox": "cross-env MOZ_HEADLESS=1 nightwatch"
   },
   "devDependencies": {
     "chromedriver": "^2.34.0",
