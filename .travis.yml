@@ -8,6 +8,10 @@ branches:
   only:
   - master
 
+addons:
+  firefox: "49.0"
+  chrome: stable
+
 install:
 - yarn install
 
