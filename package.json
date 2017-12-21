@@ -1,0 +1,25 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "Nightwatch Test",
+  "main": "index.js",
+  "repository": "git@github.com:totofish/e2e.git",
+  "author": "totofish",
+  "license": "MIT",
+  "scripts": {
+    "e2e": "nightwatch",
+    "e2e:phantomjs": "nightwatch --env phantomjs",
+    "e2e:electron": "nightwatch --env electron",
+    "e2e:firefox": "nightwatch --env firefox",
+    "e2e:chrome": "nightwatch --env chrome",
+    "e2e:headless": "nightwatch --env headless"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.34.0",
+    "electron-prebuilt": "^1.4.13",
+    "geckodriver": "^1.10.0",
+    "nightwatch": "^0.9.19",
+    "phantomjs-prebuilt": "^2.1.16",
+    "selenium-server": "^3.8.1"
+  }
+}

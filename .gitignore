@@ -1,0 +1,10 @@
+
+# Node files
+/npm-debug.log
+/yarn-error.log
+/node_modules
+
+# test result
+/tests/e2e/reports
+/tests/e2e/logs
+/tests/e2e/screenshots
