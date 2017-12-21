@@ -19,10 +19,10 @@ install:
 - yarn install
 
 script:
-- yarn run e2e -- --env chrome
-- yarn run e2e -- --env firefox
-- yarn run e2e -- --env electron
-- yarn run e2e -- --env phantomjs
+- yarn run e2e --env chrome
+- yarn run e2e --env firefox
+# - yarn run e2e --env electron
+# - yarn run e2e --env phantomjs
 
 cache:
   yarn: true
