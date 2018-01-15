@@ -8,6 +8,13 @@ const electron = require('electron-prebuilt');
 module.exports = {
   "src_folders": ["tests/e2e"],
   "output_folder": "tests/e2e/reports",
+  "test_runner": {
+    "type": "mocha",
+    "options": {
+      "ui": "bdd",
+      "reporter": "list"
+    }
+  },
   "selenium": {
     "start_process": true,
     "server_path": seleniumServer.path,
